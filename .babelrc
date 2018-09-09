@@ -1,0 +1,9 @@
+{
+  "plugins": [["component", {
+    "libraryName": "element-ui",
+    "styleLibraryName": "theme-chalk"
+  }], [
+    "transform-object-rest-spread", { "useBuiltIns": true }
+  ]],
+  "comments": false
+}

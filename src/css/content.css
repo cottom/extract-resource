@@ -1,0 +1,37 @@
+.icon {
+  width: 23px;
+  height: 21px;
+  vertical-align: sub;
+  display: inline-block;
+  -webkit-mask-image: -webkit-image-set(url(../img/largeIcons.png) 1x, url(../img/largeIcons_2x.png) 2x);
+  -webkit-mask-position: var(--spritesheet-position);
+}
+.icon-folder {
+  --spritesheet-position: -140px 192px;
+  background: linear-gradient(45deg, hsl(210, 82%, 65%), hsl(210, 82%, 80%))
+}
+
+.icon-script {
+  --spritesheet-position: -112px 96px;
+  background: linear-gradient(45deg, hsl(48, 70%, 50%), hsl(48, 70%, 70%))
+}
+
+.icon-style {
+  --spritesheet-position: -112px 96px;
+  background: linear-gradient(45deg, hsl(256, 50%, 50%), hsl(256, 50%, 70%));
+}
+
+.icon-image {
+  --spritesheet-position: -112px 96px;
+  background: linear-gradient(45deg, hsl(109, 33%, 50%), hsl(109, 33%, 70%));
+}
+
+.icon-default {
+  background: linear-gradient(45deg, hsl(0, 0%, 50%), hsl(0, 0%, 70%));
+  --spritesheet-position: -112px 96px;
+}
+
+.icon-cloud {
+  --spritesheet-position: -84px 96px;
+  background-color: #555;
+}

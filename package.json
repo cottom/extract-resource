@@ -1,0 +1,43 @@
+{
+  "name": "extract-source",
+  "version": "0.0.1",
+  "description": "chose and extra source file in batch",
+  "scripts": {
+    "build": "node utils/build.js",
+    "start": "node utils/webserver.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.11.2",
+    "fs-extra": "^0.30.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "2.24.1",
+    "style-loader": "^0.13.0",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "vue-loader": "^15.4.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "^2.3.0",
+    "write-file-webpack-plugin": "3.4.2"
+  },
+  "dependencies": {
+    "codemirror": "^5.35.0",
+    "element-ui": "^2.4.6",
+    "file-saver": "^1.3.8",
+    "highlight.js": "^9.12.0",
+    "jszip": "^3.1.5",
+    "popper.js": "^1.12.9",
+    "prettier": "^1.14.2",
+    "string_decoder": "^1.1.1",
+    "thin-promise": "^1.0.0",
+    "vue": "^2.5.17",
+    "workly": "^1.0.1",
+    "zip-folder": "^1.0.0"
+  }
+}

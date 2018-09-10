@@ -34,6 +34,8 @@ import JSZip from 'jszip'
 import { saveAs } from 'file-saver/FileSaver';
 import { Message } from 'element-ui'
 
+let caches = []
+
 export default {
   data() {
     return {
@@ -183,12 +185,17 @@ export default {
       }
     },
     refreshDownload() {
-      if (this.isDownloading) return;
+      if (this.loading) return;
       chrome.devtools.inspectedWindow.getResources(this.debounceedSetResource);
     },
-    setResource(resources) {
-      if (this.isDownloading) return;
-      this.resources = resources.filter(i => !i.url.includes('chrome-extension:'));
+    setResource(_resources) {
+      if (this.loading) return;
+      const resources = _resources.filter(i => !i.url.includes('chrome-extension:') && (i.type !== 'fetch'));
+      const allUrls = resources.map(i => i.url)
+      if (allUrls.some(i => !caches.includes(i))) {
+        caches = allUrls
+        this.resources = resources
+      }
     },
     async download() {
       this.loading = true
